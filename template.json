@@ -1,6 +1,7 @@
 {
   "package": {
     "dependencies": {
+      "@craco/craco": "^6.1.1",
       "@testing-library/jest-dom": "^5.11.4",
       "@testing-library/react": "^11.1.0",
       "@testing-library/user-event": "^12.1.10",
@@ -12,12 +13,18 @@
       "web-vitals": "^1.0.1"
     },
     "scripts": {
+      "start": "craco start",
+      "build": "craco build",
+      "test": "craco test",
       "lint": "tsc --noEmit && eslint src/**/*.{js,jsx,ts,tsx}",
       "lint:fix": "prettier --write src/**/*.{js,jsx,ts,tsx}"
     },
     "devDependencies": {
+      "@tailwindcss/forms": "^0.3.2",
+      "@tailwindcss/postcss7-compat": "^2.1.2",
       "@typescript-eslint/eslint-plugin": "^4.4.1",
       "@typescript-eslint/parser": "^4.22.0",
+      "autoprefixer": "^9.8.6",
       "eslint-config-airbnb-typescript": "^12.3.1",
       "eslint-config-prettier": "^8.3.0",
       "eslint-plugin-import": "^2.22.0",
@@ -26,7 +33,9 @@
       "eslint-plugin-prettier": "^3.4.0",
       "eslint-plugin-react": "^7.20.3",
       "eslint-plugin-react-hooks": "^4.0.8",
-      "prettier": "2.2.1"
+      "postcss": "^7.0.35",
+      "prettier": "2.2.1",
+      "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2"
     }
   }
 }
