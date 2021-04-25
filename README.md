@@ -152,11 +152,11 @@ You will find a `.env` file at the root of your project. By default it comes con
 * For not opening a browser window automatically when running the development server;
 * For not generating source maps when generating a production build.
 
-You can change this configuration directly in the file and you can find the full list of supported variable on [Create React App's docs](https://create-react-app.dev/docs/advanced-configuration/).
+You can change this configuration directly in the file and you can find the full list of supported variables on [Create React App's docs](https://create-react-app.dev/docs/advanced-configuration/).
 
 ### Scripts for generating Self Signed Certificates
 
-After creating your project you will find a `ssl` folder containing a shell script that you can use to generate self signed certificates that you can then use to run your development server with `https`.
+After creating your project you will find a `ssl` folder containing a shell script. You can use it to generate a self signed certificate to run your development server with `https`.
 
 To do that, run the `ssl/generate_development_certificate.sh` script. You can even run it in Windows if you have [WSL](https://docs.microsoft.com/en-us/windows/wsl/about) enabled.
 
@@ -171,7 +171,7 @@ Assuming you ran the shell script, you can start the development server with `ht
 
 You also need to install the self signed certificates in your operating system in the Trusted Root folder. Otherwise your browser will show an error when you try to run the app.
 
-With that, the next time you run your development server, it will use `https` and you will be able to access the app at `https://localhost:3000/` (you won't be able to use the `http` URL unless you disable `https` in your `.env` file).
+With that, the next time you [run your development server](#npm-start-or-yarn-start), it will use `https` and you will be able to access the app at `https://localhost:3000/` (you won't be able to use the `http` URL unless you disable `https` in your `.env` file).
 
 If you are not interested in using `https` in your development server, you can safely delete the `ssl` folder after creating the project.
 
