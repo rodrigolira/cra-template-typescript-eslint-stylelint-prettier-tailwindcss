@@ -1,5 +1,5 @@
 {
-  "name": "cra-template-typescript-tailwindcss",
+  "name": "cra-template-typescript-eslint-stylelint-prettier-tailwindcss",
   "version": "0.1.0",
   "keywords": [
     "react",

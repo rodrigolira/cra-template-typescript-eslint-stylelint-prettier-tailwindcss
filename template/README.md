@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) using the [typescript-tailwindcss](https://github.com/rodrigolira/cra-template-typescript-tailwindcss) template.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) using the [typescript-eslint-stylelint-prettier-tailwindcss](https://github.com/rodrigolira/cra-template-typescript-eslint-stylelint-prettier-tailwindcss) template.
 
 ## Available Scripts
 
@@ -35,7 +35,7 @@ Runs ESLint and output any style errors found in your code as per the rules defi
 
 ### `npm run lint-code:fix`
 
-Attempts to fix automatically any style errors detected in your code using [ESLint](#eslint) and [Prettier](#prettier).  By default, it will check any JavaScript or TypeScript file in your `src` folder.
+Attempts to fix automatically any style errors detected in your code using [ESLint](#eslint) and [Prettier](#prettier). By default, it will check any JavaScript or TypeScript file in your `src` folder.
 
 ### `npm run lint-styles`
 
@@ -71,7 +71,7 @@ It is already configured when you create a project using this template. You can 
 
 [ESLint](https://eslint.org/) is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
 
-When you use this template ESLint will check your code against Airbnb JavaScript style guide. 
+When you use this template ESLint will check your code against Airbnb JavaScript style guide (adapted to TypeScript).
 
 By default, it will check any JavaScript or TypeScript file (`{js,jsx,ts,tsx}`) in your `src` folder.
 
@@ -113,15 +113,15 @@ You can find `tailwind.config.js` in the root of your project. This is where you
 
 Here's a list of how it is initially configured:
 
-* It includes all of the [default colors](https://tailwindcss.com/docs/customizing-colors);
-* Sets `darkMode` to `'class'` to that you can manually change themes;
-* Includes the plugin `@tailwindcss/forms` for resetting form fields;
-* The responsive breakpoints are set by default like this:
-	* `sm`: `576px`
-	* `md`: `768px`
-	* `lg`: `992px`
-	* `xl`: `1200px`
-	* `xxl`: `1400px`
+- It includes all of the [default colors](https://tailwindcss.com/docs/customizing-colors);
+- Sets `darkMode` to `'class'` to that you can manually change themes;
+- Includes the plugin `@tailwindcss/forms` for resetting form fields;
+- The responsive breakpoints are set by default like this:
+  - `sm`: `576px`
+  - `md`: `768px`
+  - `lg`: `992px`
+  - `xl`: `1200px`
+  - `xxl`: `1400px`
 
 Keep in mind that these are not the usual default for breakpoints in TailwindCss. If you want to use the defaults, edit its configuration file and remove the key `screens` from the `theme` object.
 
@@ -143,8 +143,8 @@ You can view and edit this configuration as usual in the `.vscode/settings.json`
 
 You will find a `.env` file at the root of your project. By default it comes configured:
 
-* For not opening a browser window automatically when running the development server;
-* For not generating source maps when generating a production build.
+- For not opening a browser window automatically when running the development server;
+- For not generating source maps when generating a production build.
 
 You can change this configuration directly in the file and you can find the full list of supported variables on [Create React App's docs](https://create-react-app.dev/docs/advanced-configuration/).
 
@@ -175,13 +175,13 @@ If you use Visual Studio Code for development, when you open the project it will
 
 Here's a list of recommendations provided when using this template (all of them are free):
 
-* [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - Integrates ESLint with Visual Studio Code;
-* [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) - Integrates Stylelint with Visual Studio Code;
-* [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Integrates Prettier with Visual Studio Code. It allows Prettier to automatically format your code according to the rules you defined;
-* [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) - As the name suggests, add intellisense for TailwindCss classes;
-* [npm Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense) - An extension to autocomplete npm modules in import statements;
-* [Auto Import](https://marketplace.visualstudio.com/items?itemName=steoates.autoimport) - Automatically finds, parses and provides code actions and code completion for all available imports.
-* [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) - Automatically rename paired HTML tag.
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - Integrates ESLint with Visual Studio Code;
+- [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) - Integrates Stylelint with Visual Studio Code;
+- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Integrates Prettier with Visual Studio Code. It allows Prettier to automatically format your code according to the rules you defined;
+- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) - As the name suggests, add intellisense for TailwindCss classes;
+- [npm Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense) - An extension to autocomplete npm modules in import statements;
+- [Auto Import](https://marketplace.visualstudio.com/items?itemName=steoates.autoimport) - Automatically finds, parses and provides code actions and code completion for all available imports.
+- [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) - Automatically rename paired HTML tag.
 
 ## Learn More
 

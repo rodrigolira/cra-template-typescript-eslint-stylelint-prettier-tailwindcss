@@ -1,9 +1,9 @@
 <p align="middle">
 	<img src="img/banner.png" />
 </p>
-<h1 align="center">cra-template-typescript-tailwindcss</h1>
+<h1 align="center">cra-template-typescript-eslint-stylelint-prettier-tailwindcss</h1>
 
-Custom template for [Create React App](https://create-react-app.dev/) to scaffold a new web app project with React, TypeScript, TailwindCss, ESLint (Airbnb style), Prettier and Stylelint.
+Custom template for [Create React App](https://create-react-app.dev/) to scaffold a new web app project with React, TypeScript, TailwindCss, ESLint (Airbnb style by default), Prettier and Stylelint.
 
 You can find information below on how these tools are configured within this template and how you can customize it further.
 
@@ -17,15 +17,15 @@ Make sure you have Node.js `12.0.3` or higher installed. This requirement is spe
 
 ## Creating a new app
 
-To use this template, add the parameter `--template typescript-tailwindcss` to the Create React App command line when creating a new app.
+To use this template, add the parameter `--template typescript-eslint-stylelint-prettier-tailwindcss` to the Create React App command line when creating a new app.
 
 For example:
 
-    npx create-react-app my-app --template typescript-tailwindcss
+    npx create-react-app my-app --template typescript-eslint-stylelint-prettier-tailwindcss
     
     # or
     
-    yarn create react-app my-app --template typescript-tailwindcss
+    yarn create react-app my-app --template typescript-eslint-stylelint-prettier-tailwindcss
 
 Once the project is created you can navigate to its folder and execute `npm start` or `yarn start` to run the development server.
 
@@ -77,7 +77,7 @@ It is already configured when you create a project using this template. You can 
 
 [ESLint](https://eslint.org/) is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
 
-When you use this template ESLint will check your code against Airbnb JavaScript style guide. 
+When you use this template ESLint will check your code against Airbnb JavaScript style guide (adapted to TypeScript). 
 
 By default, it will check any JavaScript or TypeScript file (`{js,jsx,ts,tsx}`) in your `src` folder.
 
