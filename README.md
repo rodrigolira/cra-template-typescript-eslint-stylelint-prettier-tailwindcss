@@ -1,20 +1,190 @@
-# cra-template-typescript
+<p align="middle">
+	<img src="img/banner.png" />
+</p>
+<h1 align="center">cra-template-typescript-tailwindcss</h1>
 
-This is the official TypeScript template for [Create React App](https://github.com/facebook/create-react-app).
+Custom template for [Create React App](https://create-react-app.dev/) to scaffold a new web app project with React, TypeScript, TailwindCss, ESLint (Airbnb style), Prettier and Stylelint.
 
-To use this template, add `--template typescript` when creating a new app.
+You can find information below on how these tools are configured within this template and how you can customize it further.
+
+This version is based on the [official TypeScript template](https://www.npmjs.com/package/cra-template-typescript), version `1.1.2`.
+
+TailwindCss configuration without ejecting is achieved using [Create React App Configuration Override](https://github.com/gsoft-inc/craco), a.k.a. CRACO.
+
+## Requirements
+ 
+Make sure you have Node.js `12.0.3` or higher installed. This requirement is specific for running the tools needed by TailwindCss.
+
+## Creating a new app
+
+To use this template, add `--template typescript-tailwindcss` to the command you use for creating a new app.
 
 For example:
 
-```sh
-npx create-react-app my-app --template typescript
+    npx create-react-app my-app --template typescript-tailwindcss
+    
+    # or
+    
+    yarn create react-app my-app --template typescript-tailwindcss
 
-# or
+Once the project is created you can navigate to its folder and execute `npm start` or `yarn start` to run the development server.
 
-yarn create react-app my-app --template typescript
-```
+Then you can open `http://localhost:3000/` in your browser to view the default app running (browser won't open automatically when using this template).
 
-For more information, please refer to:
+Keep reading for a better understanding on the tools included and how they are configured in this template.
 
-- [Getting Started](https://create-react-app.dev/docs/getting-started) – How to create a new app.
-- [User Guide](https://create-react-app.dev) – How to develop apps bootstrapped with Create React App.
+## Available Scripts
+
+### `npm start` or `yarn start`
+
+Runs the app in development mode.
+
+### `npm test` or `yarn test`
+
+Runs the test watcher in an interactive mode.
+
+### `npm run build` or `yarn build`
+
+Builds the app for production to the `build` folder.
+
+### `npm run lint-code` or `yarn lint-code`
+
+This script runs ESLint and output any style errors found in your code as per the rules defined in its [configuration](#eslint). By default, it will check any JavaScript or TypeScript file in your `src` folder.
+
+### `npm run lint-code:fix` or `yarn lint-code:fix`
+
+Attempts to fix automatically any style errors detected in your code using [Prettier](#eslint) and [Prettier](#prettier).  By default, it will check any JavaScript or TypeScript file in your `src` folder.
+
+### `npm run lint-styles` or `yarn lint-styles`
+
+This script runs Stylelint and check all the `.css` files within your `src` folder against the rules configured.
+
+Keep in mind that by default any other extensions (like `.scss` or `.less`) will not be checked by Stylelint. If you need that behavior you will need to change the configuration.
+
+### `npm run lint-styles:fix` or `yarn lint-styles:fix`
+
+Attempts to fix automatically any style error detected in your `.css` files.
+
+Keep in mind that by default any other extensions (like `.scss` or `.less`) will not be checked by Stylelint. If you need that behavior you will need to change the configuration.
+
+## Extra Features
+
+### TailwindCss
+
+[TailwindCss](https://tailwindcss.com/) is a popular utility-first CSS framework that you can use to compose and build any design, directly in your markup.
+
+It is already configured when you create a project using this template. You can start using Tailwind's classes in any component right away.
+
+### ESLint
+
+[ESLint](https://eslint.org/) is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
+
+When you use this template ESLint will check your code against Airbnb JavaScript style guide. 
+
+By default, it will check any JavaScript or TypeScript file (`{js,jsx,ts,tsx}`) in your `src` folder.
+
+### Stylelint
+
+[Stylelint](https://stylelint.io/) is a mighty, modern linter that helps you avoid errors and enforce conventions in your styles.
+
+You can run the `lint-styles` and `lint-styles:fix` scripts to check and fix style errors.
+
+Keep in mind that by default any other extensions (like `.scss` or `.less`) will not be checked by Stylelint. If you need that behavior you will need to change the configuration.
+
+### Prettier
+
+[Prettier](https://prettier.io/) is an opinionated code formatter. It ensures that all outputted code conforms to a consistent style. This is the tool used behind the scenes when trying to fix formatting issues in your code and styles, be it when issuing one of the [available scripts](#available-scripts) or while working on your project in your code editor (more on that below).
+
+## Configuration
+
+You can find below more specific information on what is included in this template.
+
+The base of this template is the [official Typescript template from Create React App](https://www.npmjs.com/package/cra-template-typescript), version `1.1.2`.
+
+### ESLint configuration
+
+This template comes configured with `eslint-config-airbnb-typescript` and `eslint-plugin-prettier`.
+
+Settings can be found at the root of your project in `.eslintrc.json`.
+
+After creating your project you might find a key `eslintConfig` in your `package.json`. You can/should remove this key to avoid confusion and make sure that configuration is being read from the standalone json configuration file.
+
+### Stylelint configuration
+
+This template comes configured with `stylelint-prettier/recommended` and `stylelint-config-prettier`. Prettier will be used for formatting rules.
+
+Stylelint configuration can be found at the root of your project in `stylelint.config.js`.
+
+### TailwindCss configuration
+
+You can find `tailwind.config.js` in the root of your project. This is where you can customize Tailwind's classes for your project. You can find all the information on how to do it in the [official docs](https://tailwindcss.com/docs/configuration).
+
+Here's a list of how it is initially configured:
+
+* It includes all of the [default colors](https://tailwindcss.com/docs/customizing-colors);
+* Sets `darkMode` to `'class'` to that you can manually change themes;
+* Includes the plugin `@tailwindcss/forms` for resetting form fields;
+* The responsive breakpoints are set as per the list below:
+	* `sm`: `576px`
+	* `md`: `768px`
+	* `lg`: `992px`
+	* `xl`: `1200px`
+	* `xxl`: `1400px`
+
+### Formatting settings
+
+This template comes with a standalone Prettier configuration file (`.prettierrc`) specifying formatting rules. You can find this file in the root directory of your project.
+
+The same settings are also supplied in the form of an [EditorConfig](https://editorconfig.org/) file (`.editorconfig`) for compatibility with code editors that support it.
+
+### Visual Studio Code settings
+
+You will also get code editor specific settings. More specifically, it comes with Visual Studio Code settings so that your files are automatically formatted by Prettier when saving them. For that to work you need to install Prettier extension for Visual Studio Code (more on that below).
+
+There are also settings to avoid clashes between Visual Studio Code error checking in css files and Stylelint.
+
+You can view and edit this configuration as usual in the `.vscode/settings.json` file.
+
+### Environment variables
+
+You will find a `.env` file at the root of your project. By default it comes configured:
+
+* For not opening a browser window automatically when running the development server;
+* For not generating source maps when generating a production build.
+
+You can change this configuration directly in the file and you can find the full list of supported variable on [Create React App's docs](https://create-react-app.dev/docs/advanced-configuration/).
+
+### Scripts for generating Self Signed Certificates
+
+After creating your project you will find a `ssl` folder containing a shell script that you can use to generate self signed certificates that you can then use to run your development server with `https`.
+
+To do that, run the `ssl/generate_development_certificate.sh` script. You can even run it in Windows if you have [WSL](https://docs.microsoft.com/en-us/windows/wsl/about) enabled.
+
+The script will generate two files in the `ssl` folder: `development_certificate.key` and `development_certificate.crt`.
+
+**You should not commit these files in your repository**. In fact, `.gitignore` is already set up to ignore them. In a shared project, every developer should generate their own self signed certificates. And if you have multiple projects using `https` in development you might wanna consider using a single certificate for all of your projects.
+
+Assuming you ran the shell script, you can start the development server with `https` by adding the following lines in the `.env` file at the root directory of your project:
+
+    SSL_CRT_FILE=ssl/development_certificate.crt
+    SSL_KEY_FILE=ssl/development_certificate.key
+
+You also need to install the self signed certificates in your operating system in the Trusted Root folder. Otherwise your browser will show an error when you try to run the app.
+
+With that, the next time you run your development server, it will use `https` and you will be able to access the app at `https://localhost:3000/` (you won't be able to use the `http` URL unless you disable `https` in your `.env` file).
+
+If you are not interested in using `https` in your development server, you can safely delete the `ssl` folder after creating the project.
+
+### Recommended Extensions
+
+When you open the project in Visual Studio Code it will recommend you to use a few extensions. You are not required to install and use any of them. However, they do help improving the coding experience.
+
+Here's a list of recommendations provided when using this template (all of them are free):
+
+* [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - Integrates ESLint with Visual Studio Code;
+* [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) - Integrates Stylelint with Visual Studio Code;
+* [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Integrates Prettier with Visual Studio Code. It allows Prettier to automatically format your code according to the rules you defined;
+* [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) - As the name suggests, add intellisense for TailwindCss classes;
+* [npm Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense) - An extension to autocomplete npm modules in import statements;
+* [Auto Import](https://marketplace.visualstudio.com/items?itemName=steoates.autoimport) - Automatically finds, parses and provides code actions and code completion for all available imports.
+* [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) - Automatically rename paired HTML tag.
