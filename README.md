@@ -175,9 +175,9 @@ With that, the next time you [run your development server](#npm-start-or-yarn-st
 
 If you are not interested in using `https` in your development server, you can safely delete the `ssl` folder after creating the project.
 
-### Recommended Extensions
+## Visual Studio Code Recommended Extensions
 
-When you open the project in Visual Studio Code it will recommend you to use a few extensions. You are not required to install and use any of them. However, they do help improving the coding experience.
+If you use Visual Studio Code for development, when you open the project it will recommend you a few extensions. You are not required to install and use any of them. However, they do help improving the coding experience.
 
 Here's a list of recommendations provided when using this template (all of them are free):
 
