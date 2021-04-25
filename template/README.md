@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) using the [typescript-tailwindcss template](https://github.com/rodrigolira/cra-template-typescript-tailwindcss).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) using the [typescript-tailwindcss](https://github.com/rodrigolira/cra-template-typescript-tailwindcss) template.
 
 ## Available Scripts
 
