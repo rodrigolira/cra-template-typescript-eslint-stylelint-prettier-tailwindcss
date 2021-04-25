@@ -11,7 +11,7 @@
     "stylelint",
     "prettier"
   ],
-  "description": "Custom template for create-react-app with TypeScript, ESLint, Stylelint, Prettier and TailwindCSS",
+  "description": "Custom template for create-react-app with TypeScript, ESLint (Airbnb style), Stylelint, Prettier and TailwindCSS",
   "author": "rodrigolira",
   "repository": {
     "type": "git",
