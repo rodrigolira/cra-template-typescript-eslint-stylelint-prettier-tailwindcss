@@ -17,7 +17,7 @@ Make sure you have Node.js `12.0.3` or higher installed. This requirement is spe
 
 ## Creating a new app
 
-To use this template, add `--template typescript-tailwindcss` to the command you use for creating a new app.
+To use this template, add the parameter `--template typescript-tailwindcss` to the Create React App command line when creating a new app.
 
 For example:
 
@@ -30,8 +30,6 @@ For example:
 Once the project is created you can navigate to its folder and execute `npm start` or `yarn start` to run the development server.
 
 Then you can open `http://localhost:3000/` in your browser to view the default app running (browser won't open automatically when using this template).
-
-Keep reading for a better understanding on the tools included and how they are configured in this template.
 
 ## Available Scripts
 
@@ -49,21 +47,21 @@ Builds the app for production to the `build` folder.
 
 ### `npm run lint-code` or `yarn lint-code`
 
-This script runs ESLint and output any style errors found in your code as per the rules defined in its [configuration](#eslint). By default, it will check any JavaScript or TypeScript file in your `src` folder.
+Runs ESLint and output any style errors found in your code as per the rules defined in its [configuration](#eslint). By default, it will check any JavaScript or TypeScript file in your `src` folder.
 
 ### `npm run lint-code:fix` or `yarn lint-code:fix`
 
-Attempts to fix automatically any style errors detected in your code using [Prettier](#eslint) and [Prettier](#prettier).  By default, it will check any JavaScript or TypeScript file in your `src` folder.
+Attempts to fix automatically any style errors detected in your code using [ESLint](#eslint) and [Prettier](#prettier).  By default, it will check any JavaScript or TypeScript file in your `src` folder.
 
 ### `npm run lint-styles` or `yarn lint-styles`
 
-This script runs Stylelint and check all the `.css` files within your `src` folder against the rules configured.
+Runs Stylelint and output any style errors found in the `.css` files within your `src` folder.
 
 Keep in mind that by default any other extensions (like `.scss` or `.less`) will not be checked by Stylelint. If you need that behavior you will need to change the configuration.
 
 ### `npm run lint-styles:fix` or `yarn lint-styles:fix`
 
-Attempts to fix automatically any style error detected in your `.css` files.
+Attempts to fix automatically any style error detected in the `.css` files within your `src` folder.
 
 Keep in mind that by default any other extensions (like `.scss` or `.less`) will not be checked by Stylelint. If you need that behavior you will need to change the configuration.
 
@@ -73,7 +71,7 @@ Keep in mind that by default any other extensions (like `.scss` or `.less`) will
 
 [TailwindCss](https://tailwindcss.com/) is a popular utility-first CSS framework that you can use to compose and build any design, directly in your markup.
 
-It is already configured when you create a project using this template. You can start using Tailwind's classes in any component right away.
+It is already configured when you create a project using this template. You can start using Tailwind's classes in any component right away. You can find the default configuration for this template [here](#tailwindcss-configuration).
 
 ### ESLint
 
@@ -124,12 +122,14 @@ Here's a list of how it is initially configured:
 * It includes all of the [default colors](https://tailwindcss.com/docs/customizing-colors);
 * Sets `darkMode` to `'class'` to that you can manually change themes;
 * Includes the plugin `@tailwindcss/forms` for resetting form fields;
-* The responsive breakpoints are set as per the list below:
+* The responsive breakpoints are set by default like this:
 	* `sm`: `576px`
 	* `md`: `768px`
 	* `lg`: `992px`
 	* `xl`: `1200px`
 	* `xxl`: `1400px`
+
+Keep in mind that these are not the usual default for breakpoints in TailwindCss. If you want to use the defaults, edit its configuration file and remove the key `screens` from the `theme` object.
 
 ### Formatting settings
 
@@ -162,7 +162,7 @@ To do that, run the `ssl/generate_development_certificate.sh` script. You can ev
 
 The script will generate two files in the `ssl` folder: `development_certificate.key` and `development_certificate.crt`.
 
-**You should not commit these files in your repository**. In fact, `.gitignore` is already set up to ignore them. In a shared project, every developer should generate their own self signed certificates. And if you have multiple projects using `https` in development you might wanna consider using a single certificate for all of your projects.
+**You should NOT commit the generated `.key` and `.crt` files in your repository**. In fact, `.gitignore` is already set up to ignore them (assuming they are in the `ssl` folder). In a shared project, every developer should generate their own self signed certificates. And if you have multiple projects using `https` in development you might wanna consider using a single certificate for all of your projects.
 
 Assuming you ran the shell script, you can start the development server with `https` by adding the following lines in the `.env` file at the root directory of your project:
 
