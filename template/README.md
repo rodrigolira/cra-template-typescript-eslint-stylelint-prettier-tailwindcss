@@ -160,6 +160,7 @@ The script will generate two files in the `ssl` folder: `development_certificate
 
 Assuming you ran the shell script, you can start the development server with `https` by adding the following lines in the `.env` file at the root directory of your project:
 
+    HTTPS=true
     SSL_CRT_FILE=ssl/development_certificate.crt
     SSL_KEY_FILE=ssl/development_certificate.key
 
